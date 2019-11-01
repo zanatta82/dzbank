@@ -5,7 +5,7 @@ public class TesteReferencia {
 	public static void main(String[] args) {
 		
 		Conta primeiraConta = new Conta();
-		primeiraConta.saldo = 3000;
+		primeiraConta.saldo = 5000;
 		
 		System.out.println("Saldo da Primeira Conta: " + primeiraConta.saldo);
 		
