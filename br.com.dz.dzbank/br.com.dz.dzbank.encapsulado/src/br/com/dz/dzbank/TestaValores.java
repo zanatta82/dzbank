@@ -13,6 +13,5 @@ public class TestaValores {
 		Conta conta2 = new Conta(2620, 2001, 67874316-9);
 		
 		System.out.println(Conta.getTotal());
-	
 	}
 }
