@@ -8,9 +8,17 @@ public class TesteSistema {
 		Administrador adm = new Administrador ();
 		adm.setSenha(3333);
 		
+		Diretor dir = new Diretor();
+		dir.setSenha(2222);
+		
+		Cliente cli = new Cliente();
+		cli.setSenha(2222);
+		
 		SistemaInterno si = new SistemaInterno();
 		si.autentica(g);
 		si.autentica(adm);
+		si.autentica(dir);
+		si.autentica(cli);
 	}
 
 }
