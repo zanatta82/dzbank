@@ -1,4 +1,4 @@
-public class Fluxo {
+public class FluxoComTratamento {
 
 	public static void main(String[] args) {
 		System.out.println("Início do Main");
@@ -26,9 +26,13 @@ public class Fluxo {
 
 	private static void metodo3() {
 		System.out.println("Início do Método 3");
-		
-		throw new ArithmeticException("deu errado");
-		
-		//System.out.println("Fim do Método 3");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
+			int a = i / 0;
+
+			//Conta c = null;
+			//c.deposita();
+		}
+		System.out.println("Fim do Método 3");
 	}
 }
