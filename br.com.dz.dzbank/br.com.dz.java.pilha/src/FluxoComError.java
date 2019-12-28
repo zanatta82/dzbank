@@ -1,10 +1,10 @@
-public class Fluxo {
+public class FluxoComError {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MinhaExcecao {
 		System.out.println("Início do Main");
 		try {
 			metodo1();
-		} catch (ArithmeticException | NullPointerException | MinhaExcecao ex) {
+		} catch (ArithmeticException | NullPointerException ex) {
 			String msg = ex.getMessage();
 			System.out.println("Exception " + msg);
 			ex.printStackTrace();
@@ -12,23 +12,23 @@ public class Fluxo {
 		System.out.println("Fim do Main");
 	}
 
-	public static void metodo1() throws MinhaExcecao {
+	public static void metodo1() {
 		System.out.println("Início do Método 1");
 		metodo2();
 		System.out.println("Fim do Método 1");
 	}
 
-	private static void metodo2() throws MinhaExcecao {
+	private static void metodo2() {
 		System.out.println("Início do Método 2");
 		metodo3();
 		System.out.println("Fim do Método 2");
 	}
 
-	private static void metodo3() throws MinhaExcecao {
-		System.out.println("Início do Método 3");
+	private static void metodo3() {
+		System.out.println("Chamando Método 3");
 		
-		throw new MinhaExcecao("deu muito errado");
+		metodo3();
 		
-		//System.out.println("Fim do Método 3");
+		System.out.println("Fim do Método 3");
 	}
 }
